@@ -1,11 +1,10 @@
 # Makefile for OpenMP Hello World
 #
-# Jim Teresco, CSIS-335, Siena College, Fall 2021
+# Jim Teresco, CSIS-335, Siena College, Fall 2024
 #
 CFILES=openmp_hello.c
 OFILES=$(CFILES:.c=.o)
-# For gcc (noreaster)
-CC=gcc -fopenmp
+CC=clang -fopenmp=libomp
 
 openmp_hello:	$(OFILES)
 	$(CC) -o openmp_hello $(OFILES)
