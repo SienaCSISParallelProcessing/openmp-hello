@@ -4,7 +4,8 @@
 #
 CFILES=openmp_hello.c
 OFILES=$(CFILES:.c=.o)
-CC=clang -fopenmp=libomp
+CC=clang
+CFLAGS=-fopenmp=libomp
 
 openmp_hello:	$(OFILES)
 	$(CC) -o openmp_hello $(OFILES)
