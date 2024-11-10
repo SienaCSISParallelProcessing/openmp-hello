@@ -8,7 +8,7 @@ CC=clang
 CFLAGS=-fopenmp=libomp
 
 openmp_hello:	$(OFILES)
-	$(CC) -o openmp_hello $(OFILES)
+	$(CC) $(CFLAGS) -o openmp_hello $(OFILES)
 
 clean::
 	/bin/rm -f openmp_hello $(OFILES)
